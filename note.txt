@@ -1,0 +1,46 @@
+mongodb启动：bin > mongod --dbpath E:\Mongodb\data
+
+语义化版本（semver）即 dependencies、devDependencies 和 peerDependencies 里的如："co": "^4.6.0"。
+
+semver 格式：主版本号.次版本号.修订号。版本号递增规则如下：
+
+主版本号：做了不兼容的 API 修改
+次版本号：做了向下兼容的功能性新增
+修订号：做了向下兼容的 bug 修正
+
+npm i   是  npm install 简写
+
+package.json 锁定 安装包版本号 ：npm config set save-exact true
+
+运行 npm shrinkwrap 锁定安装包版本号，更保险
+npm shrinkwrap 只会生成 dependencies 的依赖，不会生成 devDependencies 的
+
+npm start 等价于 npm run start
+npm test 等价于 npm run test
+
+
+supervisor 修改代码保存后会自动重新启动express
+> cnpm i -g supervisor --save
+> supervisor --harmony index
+
+
+//res.render('模板的名字，也就是匹配views下的u.ejs 其作用就是将模板和数据结合生成 html，同时设置响应头中的 Content-Type: text/html，告诉浏览器我返回的是 html，不是纯文本，要按 html 展示')
+
+<% code %>：运行 JavaScript 代码，不输出
+<%= code %>：显示转义后的 HTML内容
+<%- code %>：显示原始 HTML 内容	
+	
+express: web 框架
+express-session: session 中间件
+connect-mongo: 将 session 存储于 mongodb，结合 express-session 使用
+connect-flash: 页面通知提示的中间件，基于 session 实现
+ejs: 模板
+express-formidable: 接收表单及文件的上传中间件
+config-lite: 读取配置文件
+marked: markdown 解析
+moment: 时间格式化
+mongolass: mongodb 驱动
+objectid-to-timestamp: 根据 ObjectId 生成时间戳
+sha1: sha1 加密，用于密码加密
+winston: 日志
+express-winston: 基于 winston 的用于 express 的日志中间件

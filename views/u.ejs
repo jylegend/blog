@@ -1,0 +1,11 @@
+<%- include(`head`)%>
+
+    <h1><%= name.toUpperCase() %></h1>
+    <p>hello, <%= name %> and <%= age%> years old.</p>
+	<%- htmlStyle%>
+	<% jsLimit%>
+	<% uList.forEach(function(a){
+		%><li><%= a%></li><%
+	}) %>
+	
+	<%- include(`footer`)%>
