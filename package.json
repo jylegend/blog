@@ -1,7 +1,7 @@
 {
   "name": "jyblog",
   "version": "1.0.0",
-  "description": "'express '",
+  "description": "node for express,jy test",
   "main": "index.js",
   "scripts": {
     "test": "node index.js",

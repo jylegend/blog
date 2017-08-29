@@ -3,7 +3,7 @@ module.exports={
     session:{
         secret:'jyblog',
         key:'jyblog',
-        maxAge:any
+        maxAge:25500000
     },
-    mongodb:'127.0.0.1:27017/jyblog'
+    mongodb:'mongodb://127.0.0.1:27017/jyblog'
 };

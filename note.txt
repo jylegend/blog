@@ -1,3 +1,16 @@
+1. 更新远程代码 到本地
+git fetch
+本地拉取分支
+git checkout -b new_branch
+拉取远程分支
+git checkout -b serverfix origin/serverfix
+跟踪远程分支
+git checkout --track origin/serverfix
+推送本地分支
+git branch dev  # 创建本地分支
+git branch  # 查看分支
+git push origin dev  # 这样远程仓库也有一个dev分支了
+
 mongodb启动：bin > mongod --dbpath E:\Mongodb\data
 
 语义化版本（semver）即 dependencies、devDependencies 和 peerDependencies 里的如："co": "^4.6.0"。
@@ -44,3 +57,10 @@ objectid-to-timestamp: 根据 ObjectId 生成时间戳
 sha1: sha1 加密，用于密码加密
 winston: 日志
 express-winston: 基于 winston 的用于 express 的日志中间件
+
+
+app.locals 和 res.locals
+优先级：res.render 传入的对象> res.locals 对象 > app.locals 对象，所以 app.locals 和 res.locals 几乎没有区别，都用来渲染模板，
+使用上的区别在于：app.locals 上通常挂载常量信息（如博客名、描述、作者信息），res.locals 上通常挂载变量信息，即每次请求可能的值都不一样（如请求者信息，res.locals.user = req.session.user）
+
+form 表单要添加 enctype="multipart/form-data" 属性才能上传文件。
