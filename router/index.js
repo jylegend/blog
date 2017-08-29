@@ -6,4 +6,5 @@ module.exports = function (app) {
 	app.use(`/logout`,require(`./logout`));
 	app.use(`/signup`,require(`./sigup`));
 	app.use(`/welcome`,require(`./welcome`));
+	app.use(`/create`,require('./posts'));
 };

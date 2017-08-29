@@ -5,3 +5,7 @@ npm-debug.log*
 
 # 忽略node_modules目录
 /node_modules
+
+# 图片忽略
+/public/img
+
