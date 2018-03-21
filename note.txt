@@ -64,3 +64,9 @@ app.locals 和 res.locals
 使用上的区别在于：app.locals 上通常挂载常量信息（如博客名、描述、作者信息），res.locals 上通常挂载变量信息，即每次请求可能的值都不一样（如请求者信息，res.locals.user = req.session.user）
 
 form 表单要添加 enctype="multipart/form-data" 属性才能上传文件。
+
+####在阿里云轻量应用服务器创建FTP服务器#####
+基于windowserver 2008 r2 服务器
+1.下载FileZilla Server安装包；
+2.安装后使用密码，创建一个Users实例（cm，使用密码：*****），点击shared folders 后指定所在项目的目录，赋该有权限
+3.退出远程，在本地机器安装FileZilla客户端，使用远程服务器IP号，使用cm和密码进行登录，如果不能读取目录，再设置客户端（编辑-》网络配置向导，将模式改为主动模式）
